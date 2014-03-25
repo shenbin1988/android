@@ -1,0 +1,73 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/body_back"
+    android:orientation="vertical"
+    >
+    
+    <RelativeLayout
+	    android:id="@+id/header"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:background="@color/head_back"
+	    >
+	    
+        <ImageButton
+	        android:id="@+id/btn_setting"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:padding="8dp"
+	        android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+	        android:src="@drawable/ic_toggle"
+	        android:background="@null"
+	         />
+	    <TextView
+	        android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/head_text"
+            android:textSize="@dimen/title"
+            android:text="@string/title" />
+	    <ImageButton
+	        android:id="@+id/btn_refresh"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:padding="8dp"
+	        android:layout_alignParentRight="true"
+	        android:layout_centerVertical="true"
+	        android:src="@drawable/ic_refresh"
+	        android:background="@null"
+	         />
+	
+	</RelativeLayout>
+	
+    <RelativeLayout
+        android:id="@+id/loading_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:visibility="gone"
+         >
+
+        <ProgressBar
+            android:id="@+id/progressBar2"
+            style="@style/CustomProgressStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+    
+    <com.huaguoshan.view.MListView
+        android:id="@+id/m_list_view"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:dividerHeight="10dp"
+        android:scrollbarStyle="outsideOverlay"
+        >
+    </com.huaguoshan.view.MListView>
+
+</LinearLayout>

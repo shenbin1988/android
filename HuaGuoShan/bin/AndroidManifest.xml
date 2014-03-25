@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.huaguoshan.app_yulebagua"
+    android:versionCode="2"
+    android:versionName="1.1" >
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="11" />
+    
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    
+    <uses-permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER"/>
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
+    
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+
+    <application
+        android:name="com.huaguoshan.MyApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme"
+         >
+         
+        <meta-data android:name="APP_CHANNEL_ID" android:value="app_yulebagua" />
+         
+        <!-- 渠道商编号 -->
+		<meta-data android:name="BaiduMobAd_CHANNEL" android:value="网易应用平台" />
+		<!-- 您从百度网站获取的APP KEY -->
+		<meta-data android:name="BaiduMobAd_STAT_ID" android:value="bbd3bd4ac2" />
+		<!-- 以下 -->
+		<!-- 是否开启错误日志统计，默认为false -->
+		<meta-data android:name="BaiduMobAd_EXCEPTION_LOG" android:value="true" />
+		<!-- 日志发送策略，可选值：APP_START、ONCE_A_DAY、SET_TIME_INTERVAL，默认为APP_START -->
+		<meta-data android:name="BaiduMobAd_SEND_STRATEGY" android:value="APP_START" />
+		<!-- 日志发送策略 为SET_TIME_INTERVAL时，需设定时间间隔。取值为1-24的整数，默认为1 -->
+		<!-- <meta-data android:name="BaiduMobAd_TIME_INTERVAL" android:value="2" /> -->
+		<!-- 日志仅在wifi网络下发送，默认为false -->
+		<meta-data android:name="BaiduMobAd_ONLY_WIFI" android:value="false" />
+		
+		<meta-data android:name="com.baidu.lbsapi.API_KEY" android:value="bNGqXuOESUXuc4hWG4arpYas" />
+		
+		<meta-data android:name="api_key" android:value="bNGqXuOESUXuc4hWG4arpYas" />
+		
+		
+        <activity
+            android:name="com.huaguoshan.activity.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" 
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity 
+            android:name="com.huaguoshan.activity.SearchActivity"
+            android:screenOrientation="portrait" 
+            >
+        </activity>
+        <activity 
+            android:name="com.huaguoshan.activity.FeedbackActivity"
+            android:screenOrientation="portrait" 
+            >
+        </activity>
+        <activity 
+            android:name="com.huaguoshan.activity.DetailActivity"
+            android:screenOrientation="portrait" 
+            >
+        </activity>
+        <activity 
+            android:name="com.huaguoshan.activity.BrowserActivity"
+            android:screenOrientation="portrait" 
+            >
+        </activity>
+        <activity 
+            android:name="com.huaguoshan.activity.CollectActivity"
+            android:screenOrientation="portrait" 
+            >
+        </activity>
+        
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" >
+        </service>
+        
+        <!-- push service client -->
+        <receiver android:name="com.huaguoshan.receiver.PushMessageReceiver">
+            <intent-filter>
+                <!-- 接收push消息 -->
+                <action android:name="com.baidu.android.pushservice.action.MESSAGE" />
+                <!-- 接收bind,unbind,fetch,delete等反馈消息 -->
+                <action android:name="com.baidu.android.pushservice.action.RECEIVE" />
+                <action android:name="com.baidu.android.pushservice.action.notification.CLICK" />
+            </intent-filter>
+        </receiver>
+        
+        <!-- push service -->
+        <receiver android:name="com.baidu.android.pushservice.PushServiceReceiver"
+            android:process=":bdservice_v1">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="com.baidu.android.pushservice.action.notification.SHOW" />
+                <action android:name="com.baidu.android.pushservice.action.media.CLICK" />
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name="com.baidu.android.pushservice.RegistrationReceiver"
+            android:process=":bdservice_v1">
+            <intent-filter>
+                <action android:name="com.baidu.android.pushservice.action.METHOD" />
+                <action android:name="com.baidu.android.pushservice.action.BIND_SYNC" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REMOVED"/>
+                <data android:scheme="package" />
+            </intent-filter>                   
+        </receiver>
+        
+        <service
+            android:name="com.baidu.android.pushservice.PushService"
+            android:exported="true"
+            android:process=":bdservice_v1" />
+
+    </application>
+    
+</manifest>

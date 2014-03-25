@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/content_body_back"
+    >
+    
+    <RelativeLayout
+        android:id="@+id/header"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:background="@color/head_back" >
+	    
+        <ImageButton
+	        android:id="@+id/btn_back"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:padding="8dp"
+	        android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+	        android:src="@drawable/ic_back_2"
+	        android:background="@null"
+	         />
+	
+	</RelativeLayout>
+	<RelativeLayout 
+	    android:id="@+id/detail_loading"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    >
+        <LinearLayout 
+            android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_centerInParent="true"
+            >
+            <ProgressBar
+	            android:id="@+id/progressBar2"
+	            style="@style/CustomProgressStyle"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_centerInParent="true" />
+            <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/loading"
+                android:textSize="12sp"
+                />
+            
+        </LinearLayout>
+		
+	</RelativeLayout>
+	
+	<LinearLayout
+	    android:id="@+id/footer"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentBottom="true"
+	    android:orientation="horizontal" >
+	    
+	    <RelativeLayout 
+	        android:id="@+id/ding"
+	        android:layout_width="0dp"
+	        android:layout_height="48dp"
+	        android:layout_weight="1"
+	        android:background="@drawable/detail_action_back"
+	        >
+	        <TextView 
+	            android:id="@+id/ding_text"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+		        android:drawableLeft="@drawable/ding1"
+		        android:gravity="center"
+		        android:text="@string/ding"
+		        android:textColor="@color/detail_action_font"
+		        android:textSize="@dimen/detail_action_font"
+		        android:layout_centerInParent="true"
+	        />
+	        
+	    </RelativeLayout>
+	    
+	    <RelativeLayout 
+	        android:id="@+id/cai"
+	        android:layout_width="0dp"
+	        android:layout_height="48dp"
+	        android:layout_weight="1"
+	        android:background="@drawable/detail_action_back"
+	        >
+	        <TextView 
+	            android:id="@+id/cai_text"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:gravity="center"
+		        android:drawableLeft="@drawable/cai1"
+		        android:text="@string/cai"
+		        android:textColor="@color/detail_action_font"
+		        android:textSize="@dimen/detail_action_font"
+		        android:layout_centerInParent="true"
+	        />
+	        
+	    </RelativeLayout>
+	    
+	    <RelativeLayout 
+	        android:id="@+id/collect"
+	        android:layout_width="0dp"
+	        android:layout_height="48dp"
+	        android:layout_weight="1"
+	        android:background="@drawable/detail_action_back"
+	        >
+	        <TextView 
+	            android:id="@+id/collect_text"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:gravity="center"
+		        android:drawableLeft="@drawable/collect1"
+		        android:text="@string/collect"
+		        android:textColor="@color/detail_action_font"
+		        android:textSize="@dimen/detail_action_font"
+		        android:layout_centerInParent="true"
+	        />
+	        
+	    </RelativeLayout>
+	    
+	</LinearLayout>
+
+	<ScrollView 
+	    android:id="@+id/body"
+	    android:layout_width="fill_parent"  
+    	android:layout_height="fill_parent"
+    	android:layout_below="@id/header"
+    	android:layout_above="@id/footer"
+    	android:scrollbars="none"
+    	android:paddingBottom="20dp"
+	    >
+		<LinearLayout
+		   android:id="@+id/feed_content"
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:padding="20dp"
+		    android:orientation="vertical"
+		   ></LinearLayout>
+	</ScrollView>
+	
+</RelativeLayout>

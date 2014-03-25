@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical" >
+    
+    <RelativeLayout
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:background="@color/head_back" >
+	    
+        <ImageButton
+	        android:id="@+id/btn_back"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:padding="8dp"
+	        android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+	        android:src="@drawable/ic_back_2"
+	        android:background="@null"
+	         />
+	    <TextView
+	        android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/head_text"
+            android:textSize="@dimen/title"
+            android:text="@string/search" />
+	
+	</RelativeLayout>
+	
+    <RelativeLayout 
+        android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:padding="10dp"
+    	android:background="#ededed"
+    	>
+        <EditText android:id="@+id/search_input"
+	    	android:layout_width="fill_parent"
+	    	android:layout_height="40dp"
+	    	android:hint="@string/search_hint"
+	    	android:textSize="14sp"
+	    	android:textColor="#333"
+	    	android:background="@drawable/search_text_bg"
+	    	android:inputType="textVisiblePassword"/>
+        <ImageView
+            android:id="@+id/search_close"
+            android:layout_width="wrap_content"
+	    	android:layout_height="wrap_content"
+	    	android:layout_marginRight="5dp"
+	    	android:src="@drawable/ic_search"
+	    	android:layout_centerInParent="true"
+	    	android:layout_alignParentRight="true"
+	    	android:visibility="invisible"
+             />
+        <ImageView
+            android:id="@+id/search_btn"
+            android:layout_width="wrap_content"
+	    	android:layout_height="wrap_content"
+	    	android:layout_marginRight="5dp"
+	    	android:src="@drawable/ic_search"
+	    	android:layout_centerInParent="true"
+	    	android:layout_alignParentRight="true"
+             />
+        
+    </RelativeLayout>
+
+</LinearLayout>

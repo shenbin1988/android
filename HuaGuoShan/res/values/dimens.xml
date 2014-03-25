@@ -1,0 +1,28 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    
+    <dimen name="shadow_width">3dp</dimen>
+    <dimen name="slidingmenu_offset">100dp</dimen>
+    
+    
+    <!-- 间距 -->
+    <dimen name="text_space">10dp</dimen>
+    
+    <!-- 文字大小 -->
+    <dimen name="title">20sp</dimen>
+	<dimen name="feed_title">18sp</dimen>
+	<dimen name="feed_desc">15sp</dimen>
+	<dimen name="feed_time">13sp</dimen>
+	<dimen name="feed_action_font">18sp</dimen>
+	<dimen name="content_title">18sp</dimen>
+	<dimen name="content_desc">15sp</dimen>
+	<dimen name="content_time">13sp</dimen>
+	<dimen name="feedback_hint">17sp</dimen>
+	<dimen name="detail_action_font">18sp</dimen>
+	<dimen name="goods_extra">16sp</dimen>
+	<dimen name="goods_other">14sp</dimen>
+
+</resources>

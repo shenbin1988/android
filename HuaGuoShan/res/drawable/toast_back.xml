@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" >
+	<!-- 边缘线的宽度和颜色 -->
+    <stroke android:width="1px" android:color="#ed5252" />
+	<!-- 设置四个角的角度 -->
+	<corners android:radius="5dp" />
+	<solid android:color="#e0ed5252"/>
+	<padding android:left="20dp" android:top="5dp" android:right="20dp" android:bottom="5dp"></padding>
+</shape>

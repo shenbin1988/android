@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="260dp"
+    android:layout_height="40dp"
+    android:background="@drawable/feed_action_back"
+    android:orientation="horizontal" >
+    
+    <RelativeLayout 
+        android:id="@+id/ding"
+        android:layout_width="80dp"
+        android:layout_height="30dp"
+        android:background="@drawable/feed_action_text_back"
+        android:layout_marginRight="5dp"
+        >
+        <TextView 
+            android:id="@+id/ding_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+	        android:drawableLeft="@drawable/ding2"
+	        android:text="@string/ding"
+	        android:textColor="@color/feed_action_font"
+	        android:textSize="@dimen/feed_action_font"
+	        android:layout_centerInParent="true"
+        />
+        
+    </RelativeLayout>
+    
+    <RelativeLayout 
+        android:id="@+id/cai"
+        android:layout_width="80dp"
+        android:layout_height="30dp"
+        android:background="@drawable/feed_action_text_back"
+        android:layout_marginRight="5dp"
+        >
+        <TextView 
+            android:id="@+id/cai_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+	        android:drawableLeft="@drawable/cai2"
+	        android:text="@string/cai"
+	        android:textColor="@color/feed_action_font"
+	        android:textSize="@dimen/feed_action_font"
+	        android:layout_centerInParent="true"
+        />
+        
+    </RelativeLayout>
+    
+    <RelativeLayout 
+        android:id="@+id/collect"
+        android:layout_width="80dp"
+        android:layout_height="30dp"
+        android:background="@drawable/feed_action_text_back"
+        android:layout_marginRight="5dp"
+        >
+        <TextView 
+            android:id="@+id/collect_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+	        android:drawableLeft="@drawable/collect2"
+	        android:text="@string/collect"
+	        android:textColor="@color/feed_action_font"
+	        android:textSize="@dimen/feed_action_font"
+	        android:layout_centerInParent="true"
+        />
+        
+    </RelativeLayout>
+    
+</LinearLayout>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <color name="list_item_title">#fff</color>
+    <color name="list_background">#303030</color>
+    <color name="list_background_pressed">#992416</color>
+    <color name="list_divider">#272727</color>
+    <color name="counter_text_bg">#626262</color>
+    <color name="counter_text_color">#c5c4c4</color>
+    <color name="select_text_color">#ff0000</color>
+    <color name="whilte">#ffffff</color>
+    
+	<color name="black">#000000</color>
+    <color name="pull_refresh_textview">#000000</color>
+    <color name="gold">#000000</color>
+    <color name="transparent">#00000000</color>
+    
+    <!-- 红色主题颜色  -->
+    <color name="body_back">#ededed</color>
+    <color name="left_menu_back">#272a2d</color>
+    <color name="left_menu_divider">#1e2124</color>
+    <color name="head_back">#d52d2d</color>
+    <color name="head_text">#ffffff</color>
+    <color name="feed_title">#000000</color>
+    <color name="feed_desc">#555555</color>
+    <color name="feed_time">#aaaaaa</color>
+    <color name="feed_action_font">#ffffff</color>
+    <color name="feed_readed">#aaaaaa</color>
+    <color name="content_body_back">#ffffff</color>
+    <color name="content_title">#000000</color>
+    <color name="content_desc">#333333</color>
+    <color name="content_time">#888888</color>
+    <color name="feedback_hint">#333333</color>
+    <color name="feedback_success">#333333</color>
+    <color name="detail_action_font">#888888</color>
+    <color name="detail_action_font_on">#ec2f2f</color>
+    <color name="detail_action_font2_on">#fffc66</color>
+    <color name="toast_back">#e0ed5252</color>
+    <color name="toast_font">#ffffff</color>
+    <color name="go_link">#ffffff</color>
+    <color name="goods_extra_label">#000000</color>
+    <color name="goods_high_price">#0D72CA</color>
+    <color name="goods_low_price">#E63434</color>
+    <color name="goods_other_label">#333333</color>
+    <color name="goods_other_price">#FF0000</color>
+    <color name="goods_other_item_back">#FFFFFF</color>
+    
+</resources>

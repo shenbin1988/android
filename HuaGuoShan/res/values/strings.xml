@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">翻八卦</string>
+	<string name="title">翻八卦</string>
+	<string name="search">搜索</string>
+	<string name="search_hint">请输入关键字</string>
+	<string name="feedback">意见反馈</string>
+	<string name="feedback_hint">您的每一条建议我们都会认真阅读</string>
+	<string name="browser_title">网页浏览</string>
+	<string name="collect_name">收藏的内容</string>
+	<string name="submit">提交</string>
+	<string name="feedback_success">我们已经看到您的反馈了，我们会第一时间评估您的意见，并在后续进行改进.</string>
+	<string name="close">关闭</string>
+	<string name="no_more_feeds">没有更多推荐，请稍后再试</string>
+	
+	<!-- mListView 相关 -->
+    <string name="p2refresh_head_load_more">推荐更多</string>
+    <string name="p2refresh_end_load_more"></string>
+    <string name="p2refresh_end_click_load_more">点击推荐</string>
+    <string name="p2refresh_release_refresh">松开即可推荐</string>
+    <string name="p2refresh_pull_to_refresh">下拉推荐</string>
+    <string name="p2refresh_doing_head_refresh">正在推荐&#8230;</string>
+    <string name="p2refresh_doing_end_refresh">推荐中&#8230;</string>
+    <string name="p2refresh_refresh_lasttime">最近更新&#160;&#058;&#160;</string>
+    
+    <!-- mListView 相关 -->
+    <string name="sync_release_refresh">松开即可同步</string>
+    <string name="sync_pull_to_refresh">下拉同步</string>
+    <string name="sync_doing_head_refresh">正在同步&#8230;</string>
+    <string name="sync_refresh_lasttime">最近同步&#160;&#058;&#160;</string>
+    
+    <!-- feed 相关  -->
+    <string name="ding">顶</string>
+    <string name="cai">踩</string>
+    <string name="collect">收藏</string>
+    <string name="go_origin">已自动优化阅读，点击查看原文</string>
+    <string name="go_link">直接购买</string>
+    
+    <!-- 商品相关 -->
+    <string name="high_price">商品历史：最高</string>
+    <string name="low_price">最低</string>
+    <string name="other_b2c">其他商家报价：</string>
+    
+    <string name="loading">正在加载&#8230;</string>
+    
+</resources>

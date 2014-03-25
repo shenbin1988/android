@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:padding="10dp"
+    android:orientation="vertical"
+    >
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:background="@drawable/detail_action_back"
+     >
+     
+    <LinearLayout 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        >
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="商品历史：最高"
+            android:textSize="16sp"
+            android:textColor="#000"
+            />
+        <TextView 
+            android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="15.5元"
+			android:textSize="16sp"
+			android:textColor="#0D72CA"	
+			android:drawableRight="@drawable/up"
+            />
+        
+    </LinearLayout>
+    
+    <LinearLayout 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        >
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="最低"
+            android:textSize="16sp"
+            android:textColor="#000"
+            />
+        <TextView 
+            android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="12.9元"
+			android:textSize="16sp"
+			android:textColor="#E63434"	
+			android:drawableRight="@drawable/down"
+            />
+        
+    </LinearLayout>
+
+</RelativeLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/graph"
+        android:scaleType="fitXY"
+        android:paddingLeft="1dp"
+        android:paddingRight="1dp"
+        android:paddingBottom="1dp"
+        android:background="@drawable/detail_action_back"
+         />
+
+    <TextView 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="其他商家报价："
+            android:textSize="16sp"
+            android:textColor="#000"
+            android:layout_marginTop="20dp"
+		    android:padding="10dp"
+		    android:background="@drawable/detail_action_back"
+            />
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:background="@drawable/detail_action_back"
+     >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1号店："
+        android:textSize="14sp"
+        android:textColor="#333333"
+         />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:text="￥13.9"
+        android:textColor="#FF0000"
+        android:textSize="14sp"
+        android:drawableRight="@drawable/go_link"
+        android:drawablePadding="10dp"
+         />
+</RelativeLayout>
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:background="@drawable/detail_action_back"
+     >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1号店："
+        android:textSize="14sp"
+        android:textColor="#333333"
+         />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:text="￥13.9"
+        android:textColor="#FF0000"
+        android:textSize="14sp"
+        android:drawableRight="@drawable/go_link"
+        android:drawablePadding="10dp"
+         />
+    
+</RelativeLayout>
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:background="@drawable/detail_action_back"
+     >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1号店："
+        android:textSize="14sp"
+        android:textColor="#333333"
+         />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:text="￥13.9"
+        android:textColor="#FF0000"
+        android:textSize="14sp"
+        android:drawableRight="@drawable/go_link"
+        android:drawablePadding="10dp"
+         />
+    
+</RelativeLayout>
+</LinearLayout>
