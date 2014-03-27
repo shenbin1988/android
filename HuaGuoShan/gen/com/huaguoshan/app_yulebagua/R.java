@@ -250,16 +250,18 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int no_image=0x7f02002b;
         public static final int progressbar_bg=0x7f02002c;
         public static final int refresh_2=0x7f02002d;
-        public static final int search=0x7f02002e;
-        public static final int search_text_bg=0x7f02002f;
-        public static final int submit_btn=0x7f020030;
-        public static final int text_area=0x7f020031;
-        public static final int toast_back=0x7f020032;
-        public static final int up=0x7f020033;
+        public static final int refresh_btn_bg=0x7f02002e;
+        public static final int search=0x7f02002f;
+        public static final int search_text_bg=0x7f020030;
+        public static final int submit_btn=0x7f020031;
+        public static final int text_area=0x7f020032;
+        public static final int toast_back=0x7f020033;
+        public static final int up=0x7f020034;
     }
     public static final class id {
-        public static final int bian=0x7f040027;
+        public static final int bian=0x7f040028;
         public static final int body=0x7f040005;
+        public static final int bottom_refresh=0x7f04001b;
         public static final int btn_back=0x7f040006;
         public static final int btn_backward=0x7f040009;
         public static final int btn_forward=0x7f04000a;
@@ -267,49 +269,49 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int btn_setting=0x7f04001a;
         public static final int cai=0x7f040014;
         public static final int cai_text=0x7f040015;
-        public static final int close=0x7f040029;
+        public static final int close=0x7f04002a;
         public static final int collect=0x7f040016;
         public static final int collect_text=0x7f040017;
-        public static final int comment=0x7f040023;
-        public static final int counter=0x7f04001f;
-        public static final int desc=0x7f040020;
-        public static final int desc_img=0x7f040021;
+        public static final int comment=0x7f040024;
+        public static final int counter=0x7f040020;
+        public static final int desc=0x7f040021;
+        public static final int desc_img=0x7f040022;
         public static final int detail_loading=0x7f04000f;
         public static final int ding=0x7f040012;
         public static final int ding_text=0x7f040013;
-        public static final int extro=0x7f040022;
+        public static final int extro=0x7f040023;
         public static final int feed_content=0x7f040018;
         public static final int footer=0x7f040011;
         public static final int fullscreen=0x7f040003;
-        public static final int head_arrowImageView=0x7f04002e;
-        public static final int head_contentLayout=0x7f04002d;
-        public static final int head_lastUpdatedTextView=0x7f040031;
-        public static final int head_progressBar=0x7f04002f;
-        public static final int head_tipsTextView=0x7f040030;
+        public static final int head_arrowImageView=0x7f04002f;
+        public static final int head_contentLayout=0x7f04002e;
+        public static final int head_lastUpdatedTextView=0x7f040032;
+        public static final int head_progressBar=0x7f040030;
+        public static final int head_tipsTextView=0x7f040031;
         public static final int header=0x7f04000c;
-        public static final int icon=0x7f04001e;
+        public static final int icon=0x7f04001f;
         public static final int left=0x7f040000;
-        public static final int left_menu=0x7f04002a;
-        public static final int load_more=0x7f04002c;
+        public static final int left_menu=0x7f04002b;
+        public static final int load_more=0x7f04002d;
         public static final int loading_bar=0x7f04000d;
         public static final int m_list_view=0x7f04000e;
         public static final int margin=0x7f040002;
         public static final int progressBar2=0x7f040010;
-        public static final int pull_to_refresh_progress=0x7f04002b;
+        public static final int pull_to_refresh_progress=0x7f04002c;
         public static final int right=0x7f040001;
-        public static final int search_btn=0x7f04001d;
-        public static final int search_close=0x7f04001c;
-        public static final int search_input=0x7f04001b;
+        public static final int search_btn=0x7f04001e;
+        public static final int search_close=0x7f04001d;
+        public static final int search_input=0x7f04001c;
         public static final int selected_view=0x7f040004;
-        public static final int share=0x7f040028;
-        public static final int slidingmenumain=0x7f040032;
-        public static final int source=0x7f040024;
+        public static final int share=0x7f040029;
+        public static final int slidingmenumain=0x7f040033;
+        public static final int source=0x7f040025;
         public static final int submit=0x7f040019;
-        public static final int time=0x7f040025;
+        public static final int time=0x7f040026;
         public static final int title=0x7f040007;
-        public static final int toast_content=0x7f040033;
+        public static final int toast_content=0x7f040034;
         public static final int webView=0x7f040008;
-        public static final int zan=0x7f040026;
+        public static final int zan=0x7f040027;
     }
     public static final class layout {
         public static final int activity_browser=0x7f030000;
@@ -336,44 +338,45 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
     public static final class string {
         public static final int app_name=0x7f080000;
         public static final int browser_title=0x7f080006;
-        public static final int cai=0x7f080019;
+        public static final int cai=0x7f08001a;
         public static final int close=0x7f08000a;
-        public static final int collect=0x7f08001a;
+        public static final int collect=0x7f08001b;
         public static final int collect_name=0x7f080007;
         /**  feed 相关  
          */
-        public static final int ding=0x7f080018;
+        public static final int ding=0x7f080019;
         public static final int feedback=0x7f080004;
         public static final int feedback_hint=0x7f080005;
         public static final int feedback_success=0x7f080009;
-        public static final int go_link=0x7f08001c;
-        public static final int go_origin=0x7f08001b;
+        public static final int go_link=0x7f08001d;
+        public static final int go_origin=0x7f08001c;
         /**  商品相关 
          */
-        public static final int high_price=0x7f08001d;
-        public static final int loading=0x7f080020;
-        public static final int low_price=0x7f08001e;
+        public static final int high_price=0x7f08001e;
+        public static final int loading=0x7f080021;
+        public static final int low_price=0x7f08001f;
         public static final int no_more_feeds=0x7f08000b;
-        public static final int other_b2c=0x7f08001f;
-        public static final int p2refresh_doing_end_refresh=0x7f080012;
-        public static final int p2refresh_doing_head_refresh=0x7f080011;
-        public static final int p2refresh_end_click_load_more=0x7f08000e;
+        public static final int other_b2c=0x7f080020;
+        public static final int p2refresh_doing_end_refresh=0x7f080013;
+        public static final int p2refresh_doing_head_refresh=0x7f080012;
+        public static final int p2refresh_end_click_load_more=0x7f08000f;
         public static final int p2refresh_end_load_more=0x7f08000d;
         /**  mListView 相关 
          */
         public static final int p2refresh_head_load_more=0x7f08000c;
-        public static final int p2refresh_pull_to_refresh=0x7f080010;
-        public static final int p2refresh_refresh_lasttime=0x7f080013;
-        public static final int p2refresh_release_refresh=0x7f08000f;
+        public static final int p2refresh_no_more_load=0x7f08000e;
+        public static final int p2refresh_pull_to_refresh=0x7f080011;
+        public static final int p2refresh_refresh_lasttime=0x7f080014;
+        public static final int p2refresh_release_refresh=0x7f080010;
         public static final int search=0x7f080002;
         public static final int search_hint=0x7f080003;
         public static final int submit=0x7f080008;
-        public static final int sync_doing_head_refresh=0x7f080016;
-        public static final int sync_pull_to_refresh=0x7f080015;
-        public static final int sync_refresh_lasttime=0x7f080017;
+        public static final int sync_doing_head_refresh=0x7f080017;
+        public static final int sync_pull_to_refresh=0x7f080016;
+        public static final int sync_refresh_lasttime=0x7f080018;
         /**  mListView 相关 
          */
-        public static final int sync_release_refresh=0x7f080014;
+        public static final int sync_release_refresh=0x7f080015;
         public static final int title=0x7f080001;
     }
     public static final class style {

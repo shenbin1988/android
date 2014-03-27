@@ -60,6 +60,8 @@ public class MListView extends ListView implements OnScrollListener {
 	private final static int ENDINT_MANUAL_LOAD_DONE = 2;
 	/**  自动完成刷新   */
 	private final static int ENDINT_AUTO_LOAD_DONE = 3;
+	/**  不能再加载更多   */
+	private final static int ENDINT_NO_MORE_LOAD = 4;
 	
 	/**    0:RELEASE_TO_REFRESH;
 	 * <p> 1:PULL_To_REFRESH;
@@ -84,6 +86,7 @@ public class MListView extends ListView implements OnScrollListener {
 	
 	private int p2refresh_head_load_more = R.string.p2refresh_head_load_more;
 	private int p2refresh_end_load_more = R.string.p2refresh_end_load_more;
+	private int p2refresh_no_more_load = R.string.p2refresh_no_more_load;
 	private int p2refresh_end_click_load_more = R.string.p2refresh_end_click_load_more;
 	private int p2refresh_release_refresh = R.string.p2refresh_release_refresh;
 	private int p2refresh_pull_to_refresh = R.string.p2refresh_pull_to_refresh;
@@ -475,6 +478,13 @@ public class MListView extends ListView implements OnScrollListener {
 				
 				mEndRootView.setVisibility(View.VISIBLE);
 				break;
+			case ENDINT_NO_MORE_LOAD:
+				mEndLoadTipsTextView.setText(p2refresh_no_more_load);
+				mEndLoadTipsTextView.setVisibility(View.VISIBLE);
+				mEndLoadProgressBar.setVisibility(View.GONE);
+				
+				mEndRootView.setVisibility(View.VISIBLE);
+				break;
 			default:
 				// 原来的代码是为了： 当所有item的高度小于ListView本身的高度时，
 				// 要隐藏掉FootView，大家自己去原作者的代码参考。
@@ -768,6 +778,11 @@ public class MListView extends ListView implements OnScrollListener {
 		}else{
 			mEndState = ENDINT_MANUAL_LOAD_DONE;
 		}
+		changeEndViewByState();
+	}
+	
+	public void noMoreLoad() {
+		mEndState = ENDINT_NO_MORE_LOAD;
 		changeEndViewByState();
 	}
 	

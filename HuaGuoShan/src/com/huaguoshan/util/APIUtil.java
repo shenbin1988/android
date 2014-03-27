@@ -25,7 +25,8 @@ import android.text.TextUtils;
 
 public class APIUtil {
 	
-	public static final String URL = "http://r.ztmhs.com";
+//	public static final String URL = "http://r.ztmhs.com";
+	public static final String URL = "http://192.168.38.226:8787";
 	public static final String SEND_CANDY = URL + "/send_candy";
 	public static final String GET_RT = URL + "/get_rt";
 	public static final String GET_COLLECT = URL + "/get_collect";
@@ -56,6 +57,7 @@ public class APIUtil {
 	private String region;						//详细地址
 	private String apps;						//用户安装应用列表
 	private String napps;					//用户当前活跃应用列表
+	private String type;
 	
 	
 	public APIUtil(Context context){
@@ -125,7 +127,7 @@ public class APIUtil {
 		return values;
 	}
 	
-	public List<NameValuePair> getRt(){
+	public List<NameValuePair> getRt(boolean bRefresh){
 		ts = getTs();
 		network = getNetwork();
 		List<NameValuePair> values = new ArrayList<NameValuePair>();
@@ -137,6 +139,11 @@ public class APIUtil {
 		values.add(new BasicNameValuePair("idv", idv));
 		values.add(new BasicNameValuePair("network", network));
 		values.add(new BasicNameValuePair("ua", ua));
+		if(bRefresh){
+			values.add(new BasicNameValuePair("type", "1"));
+		}else{
+			values.add(new BasicNameValuePair("type", "0"));
+		}
 		return values;
 	}
 	

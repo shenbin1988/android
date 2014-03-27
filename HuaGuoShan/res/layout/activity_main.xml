@@ -1,4 +1,4 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -48,6 +48,7 @@
         android:id="@+id/loading_bar"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
+        android:layout_below="@id/header"
         android:visibility="gone"
          >
 
@@ -63,11 +64,24 @@
         android:id="@+id/m_list_view"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@id/loading_bar"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
         android:dividerHeight="10dp"
         android:scrollbarStyle="outsideOverlay"
         >
     </com.huaguoshan.view.MListView>
+    
+    <ImageView 
+        android:id="@+id/bottom_refresh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_refresh"
+        android:background="@drawable/refresh_btn_bg"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        />
 
-</LinearLayout>
+</RelativeLayout>

@@ -15,13 +15,14 @@
 	<string name="no_more_feeds">没有更多推荐，请稍后再试</string>
 	
 	<!-- mListView 相关 -->
-    <string name="p2refresh_head_load_more">推荐更多</string>
+    <string name="p2refresh_head_load_more"></string>
     <string name="p2refresh_end_load_more"></string>
+    <string name="p2refresh_no_more_load">没有更多历史，您可以点刷新推荐更多</string>
     <string name="p2refresh_end_click_load_more">点击推荐</string>
     <string name="p2refresh_release_refresh">松开即可推荐</string>
     <string name="p2refresh_pull_to_refresh">下拉推荐</string>
     <string name="p2refresh_doing_head_refresh">正在推荐&#8230;</string>
-    <string name="p2refresh_doing_end_refresh">推荐中&#8230;</string>
+    <string name="p2refresh_doing_end_refresh">加载中&#8230;</string>
     <string name="p2refresh_refresh_lasttime">最近更新&#160;&#058;&#160;</string>
     
     <!-- mListView 相关 -->

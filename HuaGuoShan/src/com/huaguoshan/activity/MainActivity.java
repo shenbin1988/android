@@ -32,6 +32,7 @@ import android.view.View.OnClickListener;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -75,6 +76,8 @@ public class MainActivity  extends SlidingFragmentActivity implements SLMenuList
 	private FeedDao feedDao;
 	
 	private TextView noMoreFeed;
+	
+	private boolean bCanLoadMore = true; //是否含有更多历史
 	
 	@Override
 	protected void onResume() {
@@ -125,6 +128,7 @@ public class MainActivity  extends SlidingFragmentActivity implements SLMenuList
 		mListView = (MListView)findViewById(R.id.m_list_view);
 		mAdapter = new FeedListAdapter(this, feedList);
 		mListView.setAdapter(mAdapter);
+		
 		mListView.setOnRefreshListener(new OnRefreshListener() {
 			@Override
 			public void onRefresh() {
@@ -136,7 +140,11 @@ public class MainActivity  extends SlidingFragmentActivity implements SLMenuList
 			@Override
 			public void onLoadMore() {
 				// TODO 加载更多
-				getData(false);
+				if(!bCanLoadMore){
+					mListView.noMoreLoad();
+				}else{
+					getData(false);
+				}
 			}
 		});
 		mListView.setOnItemClickListener(new OnItemClickListener() {
@@ -160,12 +168,15 @@ public class MainActivity  extends SlidingFragmentActivity implements SLMenuList
 			}
 			
 		});
+		
 		noMoreFeed = (TextView)mListView.findViewById(R.id.load_more);
 		
 		ImageButton setting = (ImageButton)findViewById(R.id.btn_setting);
 		setting.setOnClickListener(this);
 		ImageButton refresh = (ImageButton)findViewById(R.id.btn_refresh);
 		refresh.setOnClickListener(this);
+		ImageView bottom_refresh = (ImageView)findViewById(R.id.bottom_refresh);
+		bottom_refresh.setOnClickListener(this);
 		
 		
 		if(HttpConnect.IsHaveInternet(this)){
@@ -249,6 +260,11 @@ public class MainActivity  extends SlidingFragmentActivity implements SLMenuList
 			mListView.setSelection(0);
 			getData(true);
 			break;
+		case R.id.bottom_refresh:
+			mListView.clickToRefresh();
+			mListView.setSelection(0);
+			getData(true);
+			break;
 		default:
 			break;
 		}
@@ -282,7 +298,7 @@ public class MainActivity  extends SlidingFragmentActivity implements SLMenuList
 		@Override
 		protected String doInBackground(String... params) {
 			//向服务器发送请求的数据
-			List<NameValuePair> values = mApi.getRt();
+			List<NameValuePair> values = mApi.getRt(bRefresh);
 			return HttpConnect.getContent(params[0],values);
 		}
 
@@ -295,11 +311,17 @@ public class MainActivity  extends SlidingFragmentActivity implements SLMenuList
 			}
 			if(bRefresh){
 				mListView.onRefreshComplete();
-			}else{
 				mListView.onLoadMoreComplete();
+				bCanLoadMore = true;
+			}else{
 				if(number == 0){
-					noMoreFeed.setVisibility(View.VISIBLE);
-					noMoreFeed.setText("没有更多推荐，请稍后再试");
+					mListView.noMoreLoad();
+//					Toast.makeText(getApplicationContext(), "没有更多历史，您可以点刷新推荐更多", Toast.LENGTH_LONG).show();
+//					noMoreFeed.setVisibility(View.VISIBLE);
+//					noMoreFeed.setText("没有更多历史，您可以点刷新推荐更多");
+					bCanLoadMore = false;
+				}else{
+					mListView.onLoadMoreComplete();
 				}
 			}
 			toggleLoading(false);
@@ -334,6 +356,7 @@ public class MainActivity  extends SlidingFragmentActivity implements SLMenuList
 				number = arrayList.length();
 				LinkedList<FeedItem> tempList = new LinkedList<FeedItem>();
 				if(bRefresh){
+					feedList.clear();
 					for(int i = arrayList.length() - 1; i >= 0; i--){
 						JSONObject obj = arrayList.getJSONObject(i);
 						FeedItem feed = new FeedItem();
@@ -375,13 +398,13 @@ public class MainActivity  extends SlidingFragmentActivity implements SLMenuList
 						feed.setRead(feedDao.isReaded(obj.getString("id")));
 						feedList.add(feed);
 					}
+//					number = 0; //模拟没有更多加载
 				}
 			}
 		}catch(Exception e){
 			Log.e("JSON", "返回的feeds流解析出错");
 		}
 		mAdapter.notifyDataSetChanged();
-		System.out.println(number);
 		return number;
 	}
 	
